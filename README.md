@@ -18,7 +18,7 @@ You must...
 g++ -std=c++2a main.cpp stack.hpp
 ```
 
-and then 
+and then if you want to run this code you must write
 
 ```
 ./a.out 
