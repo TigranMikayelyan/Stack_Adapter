@@ -57,26 +57,6 @@ Stack<T>& Stack<T>::operator=(Stack<T>&& rhs)
 }
 
 template <typename T>
-const T& Stack<T>::operator[](int index) const
-{
-	if (index < 0 || index >= m_arr.size())
-	{
-		throw std::out_of_range("Invalid index!!!");
-	}
-	return m_arr[index];
-}
-
-template <typename T>
-T& Stack<T>::operator[](int index)
-{
-	if (index < 0 || index >= m_arr.size())
-	{
-		throw std::out_of_range("Invalid index!!!");
-	}
-	return m_arr[index];
-}
-
-template <typename T>
 bool Stack<T>::operator==(Stack<T>& rhs)
 {
 	if (m_arr == rhs.m_arr)
@@ -182,22 +162,14 @@ void Stack<T>::swap(Stack<T>& oth)
 }
 
 template <typename T>
-const T& Stack<T>::top(int index) const
+const T& Stack<T>::top() const
 {
-	if (index < 0 || index >= m_arr.size())
-	{
-		throw std::out_of_range("Invalid index!!!");
-	}
-	return m_arr[index];
+	return m_arr[size - 1];
 }
 
 template <typename T>
-T& Stack<T>::top(int index)
+T& Stack<T>::top(int size - 1)
 {
-	if (index < 0 || index >= m_arr.size())
-	{
-		throw std::out_of_range("Invalid index!!!");
-	}
 	return m_arr[index];
 }
 
