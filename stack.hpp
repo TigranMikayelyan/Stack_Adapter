@@ -136,6 +136,10 @@ void Stack<T>::push(T value)
 template <typename T>
 void Stack<T>::pop()
 {
+	if (empty())
+	{
+		throw std::logic_error("Stack is empty");
+	}
 	m_arr.pop_back();
 }
 
@@ -164,12 +168,20 @@ void Stack<T>::swap(Stack<T>& oth)
 template <typename T>
 const T& Stack<T>::top() const
 {
+	if (empty())
+	{
+		throw std::logic_error("Stack is empty");
+	}
 	return m_arr[size - 1];
 }
 
 template <typename T>
 T& Stack<T>::top(int size - 1)
 {
+	if (empty())
+	{
+		throw std::logic_error("Stack is empty");
+	}
 	return m_arr[index];
 }
 
