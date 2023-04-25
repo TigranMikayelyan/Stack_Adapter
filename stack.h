@@ -29,7 +29,7 @@ public:
 	int size();
 	bool empty();
 	void swap(Stack<T>&);
-	const T& top(int) const;
+	const T& top() const;
 	T& top();
 	void print();
 private:
