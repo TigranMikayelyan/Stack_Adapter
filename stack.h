@@ -16,8 +16,6 @@ public:
 public:	
 	Stack& operator=(const Stack<T>&);
 	Stack& operator=(Stack<T>&&);
-	const T& operator[](int) const;
-	T& operator[](int);
 	bool operator==(Stack<T>&);
 	bool operator!=(Stack<T>&);
 	bool operator>(const Stack<T>&);
@@ -32,7 +30,7 @@ public:
 	bool empty();
 	void swap(Stack<T>&);
 	const T& top(int) const;
-	T& top(int);
+	T& top();
 	void print();
 private:
 	std::vector<T> m_arr;
