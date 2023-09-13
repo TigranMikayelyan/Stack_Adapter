@@ -10,7 +10,7 @@ If you want to compile this code.
 You must write
 
 ```
-g++ -std=c++2a main.cpp stack.hpp
+g++ -std=c++2a main.cpp
 
 ```
 
