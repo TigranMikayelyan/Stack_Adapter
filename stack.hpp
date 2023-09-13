@@ -38,7 +38,6 @@ Stack<T>& Stack<T>::operator=(const Stack<T>& rhs)
 	{
 		return *this;
 	}
-	m_arr.clear();
 	m_arr = rhs.m_arr;
 	return *this;
 }
@@ -50,7 +49,6 @@ Stack<T>& Stack<T>::operator=(Stack<T>&& rhs)
 	{
 		return *this;
 	}
-	m_arr.clear();
 	m_arr = rhs.m_arr;
 	rhs.m_arr.clear();
 	return *this;
