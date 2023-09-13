@@ -176,13 +176,13 @@ const T& Stack<T>::top() const
 }
 
 template <typename T>
-T& Stack<T>::top(int size - 1)
+T& Stack<T>::top()
 {
 	if (empty())
 	{
 		throw std::logic_error("Stack is empty");
 	}
-	return m_arr[index];
+	return m_arr[size - 1];
 }
 
 template <typename T>
